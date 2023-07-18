@@ -1,4 +1,6 @@
 let htmlsproducts=``;
+   let cart_quantity=0;
+
 
 products.forEach((item) => {
 htmlsproducts+= `
@@ -31,7 +33,7 @@ htmlsproducts+= `
                 </div><div class="product-spacer"></div><div class="added-to-cart">
                     <img src="images/icons/checkmark.png">
                         Added
-                    </></div><button class="add-to-cart-button button-primary">
+                    </></div><button class="add-to-cart-button button-primary" onclick='addtocart()'>
                     Add to Cart
                 </button></>
         </div>
@@ -43,3 +45,13 @@ htmlsproducts+= `
 
 document.querySelector('.js-product-grid').innerHTML=htmlsproducts;
 
+
+
+
+function addtocart(){
+ 
+    console.log("test");
+cart_quantity++;
+document.querySelector('.js-cart-quantity').innerHTML=cart_quantity;
+console.log(cart_quantity);
+}
